@@ -1,0 +1,23 @@
+{
+  "root": "libs/shared-book",
+  "sourceRoot": "libs/shared-book/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared-book/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared-book"],
+      "options": {
+        "jestConfig": "libs/shared-book/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

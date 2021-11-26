@@ -2,6 +2,11 @@
   "version": 2,
   "projects": {
     "admin": "apps/admin",
-    "admin-e2e": "apps/admin-e2e"
+    "admin-e2e": "apps/admin-e2e",
+    "booking": "apps/booking",
+    "booking-e2e": "apps/booking-e2e",
+    "cs-app": "apps/cs-app",
+    "cs-app-e2e": "apps/cs-app-e2e",
+    "shared-book": "libs/shared-book"
   }
 }

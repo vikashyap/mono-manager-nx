@@ -1,0 +1,28 @@
+{
+  "root": "apps/cs-app-e2e",
+  "sourceRoot": "apps/cs-app-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/cs-app-e2e/cypress.json",
+        "devServerTarget": "cs-app:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "cs-app:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/cs-app-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["cs-app"]
+}
